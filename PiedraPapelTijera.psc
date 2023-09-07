@@ -3,7 +3,7 @@ Algoritmo PiedraPapelTijera
 	Escribir "Coloca tu nombre";
 	Leer nombre;
 	Definir respuesta como entero;
-	
+	// menu de eleccion
 	Escribir "Selecciona una opcion";
 	Escribir "1 - Comenzar el Juego";
 	Escribir "2 - Ver Reglas";
@@ -13,10 +13,15 @@ Algoritmo PiedraPapelTijera
 	
 	Leer respuesta;
 	
+	//Inicio del Juego
+	
 	Si respuesta = 1 Entonces
+		//bandera cuenta las rondas y marca la salida del ciclo al llegar a 5
 		definir bandera Como Entero;
 		bandera = 0;
+		//maquina nombrado asi al oponente del usuario
 		definir maquina Como Entero;
+		
 		Definir eleccion Como Entero;
 		definir puntomaquina Como Entero;
 		definir puntoretador Como Entero;
@@ -79,6 +84,7 @@ Algoritmo PiedraPapelTijera
 			FinSi
 			
 		Hasta Que bandera = 5;
+		
 		Escribir "";
 		si puntoretador > puntomaquina Entonces
 			Escribir "El Ganador es " , nombre;
@@ -92,6 +98,8 @@ Algoritmo PiedraPapelTijera
 		Escribir "Gracias por Jugar";
 	FinSi
 	
+	
+	//muestra las reglas del juego
 	Si respuesta = 2 Entonces
 		Escribir  "Bienvenido a mi Juego";
 		Escribir  "Seleciona usando los numeros";
@@ -106,6 +114,7 @@ Algoritmo PiedraPapelTijera
 		Escribir "Presiona Reiniciar para volver al menu";
 	FinSi
 	
+	//anexo muestra los creditos del juego
 	Si respuesta = 3 Entonces
 		Escribir "*************************";
 		Escribir "*************************";
@@ -119,6 +128,8 @@ Algoritmo PiedraPapelTijera
 		Escribir "Presiona Reiniciar para volver al menu";
 	FinSi
 	
+	
+	//Mino juego muestra el lado resultante de arrojar moneda
 	si respuesta = 4 Entonces
 		Escribir "Tirando moneda";
 		Escribir "";
